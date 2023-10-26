@@ -243,28 +243,30 @@ CSS when certain conditions that we declare are met - such as a certain viewport
 width, etc. */
 
 /* Media Query Tablet */
-@media (min-width: 600px) {
+/* --- */
+@media (min-width: 767px) and (max-width: 1199px) {
   .card-section {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    flex-flow: wrap row;
+    justify-content: center;
   }
 
   .product-card {
-    width: 48%;
+    width: 47%;
   }
 
   .intro-text {
-    width: 48%;
+    width: 47%;
     align-self: flex-start;
   }
 }
 
+/* --- */
 /* Media Query Desktop */
+/* --- */
 @media (min-width: 1200px) {
   body {
     width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   }
 
   .main-header {
@@ -276,16 +278,26 @@ width, etc. */
   }
 
   .main-content {
-    padding-top: 0;
+    padding: 0 0 var(--gap) 0;
+  }
+
+  .card-section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
   .product-card {
-    width: 48%;
+    width: 47%;
   }
 
   .product-card:first-child {
     width: 100%;
     height: 500px;
-    box-shadow: none;
+  }
+
+  .intro-text {
+    width: 47%;
+    align-self: flex-start;
   }
 }
